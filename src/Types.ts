@@ -1,16 +1,4 @@
 export type Movie = {
-    Poster: string,
-    Title: string,
-    Year: string,
-    Language: string,
-    Runtime: string,
-    Actors: string,
-    Genre: string,
-    imdbRating: string,
-    imdbID?: string
-}
-
-export type MovieResult = {
     Title: string,
     Year: string,
     imdbID: string,
@@ -19,5 +7,13 @@ export type MovieResult = {
 }
 
 export type SearchResults = {
-    Search: Array<MovieResult>
+    Search: Array<Movie>
+}
+
+export enum SortTypes {
+    yearAsc = 'yearAsc',
+    yearDesc = 'yearDesc',
+    titleAsc = 'titleAsc',
+    titleDesc = 'titleDesc',
+    default = '---'
 }
